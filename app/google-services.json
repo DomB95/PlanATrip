@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1040229159365",
+    "project_id": "planatrip-e29a3",
+    "storage_bucket": "planatrip-e29a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040229159365:android:38190a44d5419589fe7bac",
+        "android_client_info": {
+          "package_name": "com.example.planatrip"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKJGXxaX9a5fW5uX2gYUSzVgjMXtbIM1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
