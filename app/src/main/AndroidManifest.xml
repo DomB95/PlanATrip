@@ -22,7 +22,7 @@
         android:theme="@style/Theme.PlanATrip"
         tools:targetApi="31">
         <activity
-            android:name=".CalendarPicker"
+            android:name=".MainMenuScreen"
             android:exported="true">
 
         </activity>

@@ -13,7 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class CalendarPicker extends AppCompatActivity{
+public class MainMenuScreen extends AppCompatActivity{
 
     private Button calbutton;
     Calendar cal = Calendar.getInstance();
@@ -23,8 +23,7 @@ public class CalendarPicker extends AppCompatActivity{
 
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.calendarmaker);
-        calbut= (Button) findViewById(R.id.calendarbutton);
+        setContentView(R.layout.mainscreen);
         DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int day) {
@@ -39,7 +38,7 @@ public class CalendarPicker extends AppCompatActivity{
         calbut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new DatePickerDialog(CalendarPicker.this,date,cal.get(Calendar.YEAR),cal.get(Calendar.MONTH),cal.get(Calendar.DAY_OF_MONTH)).show();
+                new DatePickerDialog(MainMenuScreen.this,date,cal.get(Calendar.YEAR),cal.get(Calendar.MONTH),cal.get(Calendar.DAY_OF_MONTH)).show();
             }
         });
     }
