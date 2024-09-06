@@ -24,8 +24,12 @@
         <activity
             android:name=".MainMenuScreen"
             android:exported="true">
+        </activity>
+        <activity
+            android:name=".PlanATrip">
 
         </activity>
+
         <activity
             android:name=".login"
             android:exported="true">
