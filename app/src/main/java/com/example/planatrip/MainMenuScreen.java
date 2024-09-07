@@ -35,6 +35,8 @@ public class MainMenuScreen extends Activity {
        checkflightsbutton.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
+               Intent newscreen = new Intent(MainMenuScreen.this, PlanATrip.class);
+               startActivity(newscreen);
 
            }
        });
@@ -42,6 +44,8 @@ public class MainMenuScreen extends Activity {
         hotelbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent newscreen = new Intent(MainMenuScreen.this, PlanATrip.class);
+                startActivity(newscreen);
 
             }
         });
@@ -49,6 +53,8 @@ public class MainMenuScreen extends Activity {
         activitybutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent newscreen = new Intent(MainMenuScreen.this, PlanATrip.class);
+                startActivity(newscreen);
 
             }
         });
@@ -57,7 +63,8 @@ public class MainMenuScreen extends Activity {
         foodbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent newscreen = new Intent(MainMenuScreen.this, PlanATrip.class);
+                startActivity(newscreen);
             }
         });
 
@@ -66,7 +73,8 @@ public class MainMenuScreen extends Activity {
         itinaraybutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent newscreen = new Intent(MainMenuScreen.this, PlanATrip.class);
+                startActivity(newscreen);
             }
         });
 

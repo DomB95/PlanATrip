@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_profile" android:title="Profile" />
+    <item android:id="@+id/nav_main" android:title="Main Menu" />
+    <item android:id="@+id/nav_flights" android:title="Check Flights" />
+    <item android:id="@+id/nav_hotels" android:title="Check Hotels" />
+    <item android:id="@+id/nav_activities" android:title="Check Activities" />
+    <item android:id="@+id/nav_food" android:title="Check Restaurants" />
+    <item android:id="@+id/nav_trips" android:title="Check Trips" />
+</menu>

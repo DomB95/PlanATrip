@@ -65,11 +65,13 @@
                         android:layout_width="236dp"
                         android:layout_height="104dp"
                         android:layout_gravity="center"
+                        android:backgroundTint="#000000"
                         android:fontFamily="@font/reenie_beanie"
                         android:gravity="center"
                         android:padding="@dimen/cardview_compat_inset_shadow"
-                        android:text="PlanATtrip"
-                        android:textColor="@color/black"
+                        android:text="PlanATrip"
+                        android:textColor="@color/white"
+                        android:textColorLink="#FFFCFC"
                         android:textSize="44dp" />
 
                 </androidx.cardview.widget.CardView>
@@ -110,11 +112,12 @@
                         android:layout_width="236dp"
                         android:layout_height="104dp"
                         android:layout_gravity="center"
+                        android:backgroundTint="#000000"
                         android:fontFamily="@font/reenie_beanie"
                         android:gravity="center"
                         android:padding="@dimen/cardview_compat_inset_shadow"
                         android:text="CheckFlights"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="44dp" />
 
                 </androidx.cardview.widget.CardView>
@@ -296,7 +299,7 @@
             </LinearLayout>
 
 
-            </LinearLayout>
+        </LinearLayout>
 
 
     </ScrollView>
