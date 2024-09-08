@@ -157,11 +157,12 @@
                         android:layout_width="236dp"
                         android:layout_height="104dp"
                         android:layout_gravity="center"
+                        android:backgroundTint="@color/black"
                         android:fontFamily="@font/reenie_beanie"
                         android:gravity="center"
                         android:padding="@dimen/cardview_compat_inset_shadow"
                         android:text="CheckHotels"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="44dp" />
 
                 </androidx.cardview.widget.CardView>
@@ -201,11 +202,12 @@
                         android:layout_width="236dp"
                         android:layout_height="104dp"
                         android:layout_gravity="center"
+                        android:backgroundTint="@color/black"
                         android:fontFamily="@font/reenie_beanie"
                         android:gravity="center"
                         android:padding="@dimen/cardview_compat_inset_shadow"
                         android:text="NearbyActivities"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="44dp" />
 
                 </androidx.cardview.widget.CardView>
@@ -243,12 +245,13 @@
                         android:layout_width="236dp"
                         android:layout_height="104dp"
                         android:layout_gravity="center"
+                        android:backgroundTint="@color/black"
                         android:fontFamily="@font/reenie_beanie"
                         android:gravity="center"
                         android:padding="@dimen/cardview_compat_inset_shadow"
                         android:text="CheckRestaurants"
-                        android:textSize="35dp"
-                        android:textColor="@color/black"/>
+                        android:textColor="@color/white"
+                        android:textSize="35dp" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -287,11 +290,12 @@
                         android:layout_width="236dp"
                         android:layout_height="104dp"
                         android:layout_gravity="center"
+                        android:backgroundTint="#000000"
                         android:fontFamily="@font/reenie_beanie"
                         android:gravity="center"
                         android:padding="@dimen/cardview_compat_inset_shadow"
                         android:text="CheckTrips"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="44dp" />
 
                 </androidx.cardview.widget.CardView>
