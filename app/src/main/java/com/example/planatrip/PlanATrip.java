@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.view.View;
@@ -29,6 +30,7 @@ public class PlanATrip extends AppCompatActivity {
     TextView departday;
     TextView returnday;
     EditText cityname;
+    Button nextscreen;
     private int depyear, depday, depmonth,retyear,retday,retmonth;
 
 
@@ -113,6 +115,17 @@ public class PlanATrip extends AppCompatActivity {
         SharedPref.write(SharedPref.departdate, (depyear + "-" +  depmonth + "-" + depday));
 
         SharedPref.write(SharedPref.Returndate, (retyear + "-" +  retmonth + "-" + retday));
+
+
+        nextscreen = (Button) findViewById(R.id.savetripinfobutton);
+
+        nextscreen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent newscreen = new Intent(PlanATrip.this, CheckFlights.class);
+                startActivity(newscreen);
+            }
+        });
 
 
     }
