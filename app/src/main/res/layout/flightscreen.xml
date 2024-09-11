@@ -25,13 +25,13 @@
             <LinearLayout
                     android:id="@+id/Infofield"
                     android:layout_width="wrap_content"
-                    android:layout_height="100dp"
+                    android:layout_height="50dp"
                     android:orientation="horizontal"
                     android:background="@color/black">
 
                 <TextView
                     android:layout_width="95dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="45dp"
                     android:layout_gravity="left"
                     android:layout_weight="1"
                     android:fontFamily="@font/reenie_beanie"
@@ -40,13 +40,31 @@
                     android:textColor="@color/white"
                     android:textSize="35sp">
                 </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Infofield2"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@color/black">
+                <TextView
+                    android:id="@+id/destinationname"
+                    android:layout_width="95dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:fontFamily="@font/reenie_beanie"
+                    android:text=""
+                    android:textSize="35sp"
+                    android:textColor="@color/white">
 
+                </TextView>
             </LinearLayout>
 
 
-            
-            
-            
+
+
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
