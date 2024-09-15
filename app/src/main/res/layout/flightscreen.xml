@@ -40,30 +40,314 @@
                     android:textColor="@color/white"
                     android:textSize="35sp">
                 </TextView>
+
+                <TextView
+                    android:id="@+id/Tripnammeflight"
+                    android:layout_width="299dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/reenie_beanie"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="40sp"
+                    android:text="">
+
+                </TextView>
+
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/Infofield2"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:background="@color/black">
+                android:background="@color/black"
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/destinationname"
-                    android:layout_width="95dp"
+                    android:layout_width="210dp"
                     android:layout_height="45dp"
                     android:layout_gravity="left"
-                    android:gravity="left"
                     android:fontFamily="@font/reenie_beanie"
+                    android:gravity="left"
                     android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="35sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/durantionflight"
+                    android:layout_width="184dp"
+                    android:layout_height="45dp"
+                    android:fontFamily="@font/reenie_beanie"
+                    android:textColor="@color/white"
                     android:textSize="35sp"
-                    android:textColor="@color/white">
+                    android:text="">
 
                 </TextView>
             </LinearLayout>
 
 
+            <LinearLayout
+                android:id="@+id/firstresponse"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
 
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:elevation="30dp"
+                    android:background="@color/white">
 
+                    <ImageView
+                        android:id="@+id/flight1"
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop">
+
+                    </ImageView>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="261dp"
+                    android:layout_height="100dp"
+                    android:elevation="30dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/firsttextresponse"
+                        android:layout_width="236dp"
+                        android:layout_height="104dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="#000000"
+                        android:fontFamily="@font/reenie_beanie"
+                        android:gravity="center"
+                        android:padding="@dimen/cardview_compat_inset_shadow"
+                        android:textColor="@color/black"
+                        android:textSize="44dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/secondresponse"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:elevation="30dp"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/flight2"
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop">
+
+                    </ImageView>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="261dp"
+                    android:layout_height="100dp"
+                    android:elevation="30dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/secondtextresponse"
+                        android:layout_width="236dp"
+                        android:layout_height="104dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="#000000"
+                        android:fontFamily="@font/reenie_beanie"
+                        android:gravity="center"
+                        android:padding="@dimen/cardview_compat_inset_shadow"
+                        android:textColor="@color/black"
+                        android:textSize="44dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/thirdresponse"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:elevation="30dp"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/flight3"
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop">
+
+                    </ImageView>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="261dp"
+                    android:layout_height="100dp"
+                    android:elevation="30dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/thirdtextresponse"
+                        android:layout_width="236dp"
+                        android:layout_height="104dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="#000000"
+                        android:fontFamily="@font/reenie_beanie"
+                        android:gravity="center"
+                        android:padding="@dimen/cardview_compat_inset_shadow"
+                        android:textColor="@color/black"
+                        android:textSize="44dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fourthresponse"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:elevation="30dp"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/flight4"
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop">
+
+                    </ImageView>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="261dp"
+                    android:layout_height="100dp"
+                    android:elevation="30dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/fourthtextresponse"
+                        android:layout_width="236dp"
+                        android:layout_height="104dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="#000000"
+                        android:fontFamily="@font/reenie_beanie"
+                        android:gravity="center"
+                        android:padding="@dimen/cardview_compat_inset_shadow"
+                        android:textColor="@color/black"
+                        android:textSize="44dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fifthresponse"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:elevation="30dp"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/flight5"
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop">
+
+                    </ImageView>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="261dp"
+                    android:layout_height="100dp"
+                    android:elevation="30dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/fifthtextresponse"
+                        android:layout_width="236dp"
+                        android:layout_height="104dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="#000000"
+                        android:fontFamily="@font/reenie_beanie"
+                        android:gravity="center"
+                        android:padding="@dimen/cardview_compat_inset_shadow"
+                        android:textColor="@color/black"
+                        android:textSize="44dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/sixthresponse"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:elevation="30dp"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/flight6"
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop">
+
+                    </ImageView>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="261dp"
+                    android:layout_height="100dp"
+                    android:elevation="30dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/sixthtextresponse"
+                        android:layout_width="236dp"
+                        android:layout_height="104dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="#000000"
+                        android:fontFamily="@font/reenie_beanie"
+                        android:gravity="center"
+                        android:padding="@dimen/cardview_compat_inset_shadow"
+                        android:textColor="@color/black"
+                        android:textSize="44dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>

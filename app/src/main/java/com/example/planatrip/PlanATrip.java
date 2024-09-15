@@ -1,23 +1,16 @@
 package com.example.planatrip;
 
-import static com.google.android.material.internal.ContextUtils.getActivity;
-
-import android.app.Activity;
 import android.app.DatePickerDialog;
-import android.app.Dialog;
-import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.browser.trusted.sharing.ShareData;
 
 import java.util.Calendar;
 
@@ -40,31 +33,23 @@ public class PlanATrip extends AppCompatActivity {
         setContentView(R.layout.tripstarting);
 
         SharedPref.init(getApplicationContext());
+        nextscreen = (Button) findViewById(R.id.savetripinfobutton);
 
-        planname = findViewById(R.id.planname);
-
-        SharedPref.write(SharedPref.TripName, planname.getText().toString());
-
-        depart = findViewById(R.id.departurecode);
-
-        SharedPref.write(SharedPref.FromDes, depart.getText().toString());
-
-        arrival = findViewById(R.id.arrivalcode);
-
-        SharedPref.write(SharedPref.Destin, arrival.getText().toString());
-
-
-        cityname = findViewById(R.id.citydestname);
-
-        SharedPref.write(SharedPref.CityName, cityname.getText().toString());
-
-
+        nextscreen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent newscreen = new Intent(PlanATrip.this, CheckFlights.class);
+                startActivity(newscreen);
+            }
+        });
+    }
+    @Override
+    protected void onStart(){
+        super.onStart();
 
         departday = findViewById(R.id.departdate);
 
         returnday = findViewById(R.id.returndate);
-
-
 
         departuredate = (Button) findViewById(R.id.departbutton);
 
@@ -81,7 +66,7 @@ public class PlanATrip extends AppCompatActivity {
                 DatePickerDialog datpicker = new DatePickerDialog(PlanATrip.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                        departday.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
+                        departday.setText(dayOfMonth + "-" + (month + 1) + "-" + year);
                     }
                 }, depyear, depmonth, depday);
 
@@ -101,7 +86,7 @@ public class PlanATrip extends AppCompatActivity {
                 DatePickerDialog datpicker = new DatePickerDialog(PlanATrip.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                        returnday.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
+                        returnday.setText(dayOfMonth + "-" + (month + 1) + "-" + year);
                     }
                 }, retyear, retmonth, retday);
 
@@ -115,20 +100,42 @@ public class PlanATrip extends AppCompatActivity {
         SharedPref.write(SharedPref.departdate, (depyear + "-" +  depmonth + "-" + depday));
 
         SharedPref.write(SharedPref.Returndate, (retyear + "-" +  retmonth + "-" + retday));
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        SharedPref.init(getApplicationContext());
+
+        planname = findViewById(R.id.planname);
 
 
-        nextscreen = (Button) findViewById(R.id.savetripinfobutton);
 
-        nextscreen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent newscreen = new Intent(PlanATrip.this, CheckFlights.class);
-                startActivity(newscreen);
-            }
-        });
+        String plannametext = planname.getText().toString();
+
+
+        SharedPref.write(SharedPref.TripName, plannametext);
+
+        Log.i("saved String", plannametext);
+
+        depart = findViewById(R.id.departurecode);
+
+        SharedPref.write(SharedPref.FromDes, depart.getText().toString());
+
+        arrival = findViewById(R.id.arrivalcode);
+
+        SharedPref.write(SharedPref.Destin, arrival.getText().toString());
+
+
+        cityname = findViewById(R.id.citydestname);
+
+        SharedPref.write(SharedPref.CityName, cityname.getText().toString());
+
+        Log.i("saved city", cityname.getText().toString());
 
 
     }
+
 
 
 };

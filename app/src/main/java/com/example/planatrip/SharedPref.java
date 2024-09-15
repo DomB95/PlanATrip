@@ -14,10 +14,6 @@ public class SharedPref
     public static final String Returndate = "return";
     public static final String CityName = "cityname";
 
-    private SharedPref()
-    {
-
-    }
 
     public static void init(Context context)
     {
@@ -32,7 +28,8 @@ public class SharedPref
     public static void write(String key, String value) {
         SharedPreferences.Editor prefsEditor = profiledata.edit();
         prefsEditor.putString(key, value);
-        prefsEditor.commit();
+        prefsEditor.apply();
+
     }
 
     public static boolean read(String key, boolean defValue) {
@@ -42,7 +39,8 @@ public class SharedPref
     public static void write(String key, boolean value) {
         SharedPreferences.Editor prefsEditor = profiledata.edit();
         prefsEditor.putBoolean(key, value);
-        prefsEditor.commit();
+        prefsEditor.apply();
+
     }
 
     public static Integer read(String key, int defValue) {
@@ -51,7 +49,15 @@ public class SharedPref
 
     public static void write(String key, Integer value) {
         SharedPreferences.Editor prefsEditor = profiledata.edit();
-        prefsEditor.putInt(key, value).commit();
+        prefsEditor.putInt(key, value).apply();
+
+
+    }
+
+    public static void clear(){
+        SharedPreferences.Editor prefsEditor = profiledata.edit();
+        prefsEditor.clear().apply();
+
     }
 
 
