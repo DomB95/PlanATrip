@@ -97,9 +97,6 @@ public class PlanATrip extends AppCompatActivity {
 
         });
 
-        SharedPref.write(SharedPref.departdate, (depyear + "-" +  depmonth + "-" + depday));
-
-        SharedPref.write(SharedPref.Returndate, (retyear + "-" +  retmonth + "-" + retday));
     }
 
     @Override
@@ -132,6 +129,13 @@ public class PlanATrip extends AppCompatActivity {
         SharedPref.write(SharedPref.CityName, cityname.getText().toString());
 
         Log.i("saved city", cityname.getText().toString());
+
+        String depature = departday.getText().toString();
+        String arrival = returnday.getText().toString();
+
+        SharedPref.write(SharedPref.departdate, depature);
+        SharedPref.write(SharedPref.Returndate, arrival);
+
 
 
     }

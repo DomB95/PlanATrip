@@ -1,12 +1,13 @@
 package com.example.planatrip;
-import com.google.gson.JsonObject;
+
 import android.os.Bundle;
 import android.widget.TextView;
-import androidx.appcompat.app.AppCompatActivity;
-import java.util.HashMap;
-import java.util.Map;
 
-public class CheckFlights extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+
+
+public class CheckFlights extends AppCompatActivity implements Runnable {
 
     TextView cityname;
     TextView flightinfo;
@@ -38,16 +39,15 @@ public class CheckFlights extends AppCompatActivity {
         durationtime.setText(departuredate + " / " + returndate);
 
 
-        Map<String, String> parameter = new HashMap<>();
 
-        parameter.put("engine", "google_flights");
-        parameter.put("departure_id", departcode);
-        parameter.put("arrival_id", destinationcode);
-        parameter.put("outbound_date", departuredate);
-        parameter.put("return_date", returndate);
-        parameter.put("currency", "USD");
-        parameter.put("hl", "en");
-        parameter.put("api_key", "b5088acc7f6118bf4af1c85ee12f811d5166586c89802a20b97fbc47a760b398");
+
+
+
+
+    }
+
+    @Override
+    public void run() {
 
     }
 }
