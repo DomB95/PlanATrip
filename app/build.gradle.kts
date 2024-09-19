@@ -41,21 +41,23 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation("com.google.android.gms:play-services-maps:18.2.0")
+    implementation("com.google.android.gms:play-services-maps:19.0.0")
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth")
     constraints{
         implementation("com.google.firebase:firebase-firestore")
     }
-
+    implementation("com.github.serpapi:serpapi-java:1.0.0")
+    implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.14")
+    implementation("com.squareup.okhttp:okhttp:2.7.5")
     implementation("com.google.code.gson:gson:2.11.0")
     implementation ("com.android.volley:volley:1.2.1")
-    implementation("com.google.android.gms:play-services-auth:20.7.0")
-    implementation("com.google.firebase:firebase-database-ktx:20.3.0")
-    implementation(platform("com.google.firebase:firebase-bom:32.7.1"))
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.11.0")
-    implementation ("com.google.android.material:material:1.2.0-alpha05")
+    implementation("com.google.android.gms:play-services-auth:21.2.0")
+    implementation("com.google.firebase:firebase-database-ktx:21.0.0")
+    implementation(platform("com.google.firebase:firebase-bom:33.3.0"))
+    implementation("androidx.core:core-ktx:1.13.1")
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("com.google.android.material:material:1.12.0")
+    implementation ("com.google.android.material:material:1.12.0")
 
 }
