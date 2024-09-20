@@ -17,7 +17,9 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
+buildFeatures {
+    buildConfig = true
+}
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -31,7 +33,8 @@ android {
 }
 
 dependencies {
-
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
+    implementation("com.google.android.libraries.places:places:3.5.0")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -47,6 +50,7 @@ dependencies {
     constraints{
         implementation("com.google.firebase:firebase-firestore")
     }
+    implementation("org.json:json:20240303")
     implementation("com.github.serpapi:serpapi-java:1.0.0")
     implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.14")
     implementation("com.squareup.okhttp:okhttp:2.7.5")

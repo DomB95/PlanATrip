@@ -1,5 +1,6 @@
 package com.example.planatrip;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
@@ -19,7 +20,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 
-public class CheckFlights extends AppCompatActivity {
+public class CheckFlights extends AppCompatActivity implements Runnable {
 
     TextView cityname;
     TextView flightinfo;
@@ -51,34 +52,65 @@ public class CheckFlights extends AppCompatActivity {
         durationtime.setText(departuredate + " / " + returndate);
 
 
+
+
     }
-    @Override
-    protected void onStart(){
-        super.onStart();
 
-            Map<String, String> auth = new HashMap<>();
-            auth.put("api_key", "dc9f2d25d8491f966db4ee52982271ba90a703469573bde8f895c6e0a51cea4f");
-            SerpApi serpapi = new SerpApi(auth);
 
-            Map<String, String> parameter = new HashMap<>();
-            parameter.put("q", "Coffee");
-            parameter.put("location", "Austin, Texas, United States");
-            parameter.put("hl", "en");
-            parameter.put("gl", "us");
-            parameter.put("google_domain", "google.com");
-            parameter.put("safe", "active");
-            parameter.put("start", "10");
-            parameter.put("num", "10");
-            parameter.put("device", "desktop");
-            try {
-                JsonObject results = serpapi.search(parameter);
-                System.out.print(results.getAsString());
-            } catch (SerpApiException e) {
+    private static final String AUTHORIZATION_HEADER = "Authorization";
+    public static final String USERNAME = "USERNAME";
+    public static final String PASSWORD = "PASSWORD";
 
-                Log.e("error","Error occurred during API call",e);
-                throw new RuntimeException(e);
-            }
+    public void run() {
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("source", "google_search");
+            jsonObject.put("query", "adidas");
+            jsonObject.put("geo_location", "California,United States");
+            jsonObject.put("parse", true);
+
+        } catch (JSONException e) {
+            Log.e("Error", " Error parsing website", e);
+            throw new RuntimeException(e);
         }
+
+        Authenticator authenticator = (route, response) -> {
+            String credential = Credentials.basic(USERNAME, PASSWORD);
+            return response
+                    .request()
+                    .newBuilder()
+                    .header(AUTHORIZATION_HEADER, credential)
+                    .build();
+        };
+
+        OkHttpClient client = new OkHttpClient.Builder()
+                .authenticator(authenticator)
+                .readTimeout(180, TimeUnit.SECONDS)
+                .build();
+
+        MediaType mediaType = MediaType.parse("application/json; charset=utf-8");
+        RequestBody body = RequestBody.create(jsonObject.toString(), mediaType);
+        Request request = new Request.Builder()
+                .url("https://realtime.oxylabs.io/v1/queries")
+                .post(body)
+                .build();
+
+        try (Response response = client.newCall(request).execute()) {
+            if (response.body() != null) {
+                try (ResponseBody responseBody = response.body()) {
+                    System.out.println(responseBody.string());
+                }
+            }
+        } catch (Exception exception) {
+            System.out.println("Error: " + exception.getMessage());
+        }
+
+        System.exit(0);
+    }
+
+    public static void main(String[] args) {
+        new Thread(new CheckFlights()).start();
+    }
 }
 
 
