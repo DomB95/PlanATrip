@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 
-public class CheckFlights extends AppCompatActivity implements Runnable {
+public class CheckFlights extends AppCompatActivity  {
 
     TextView cityname;
     TextView flightinfo;
@@ -51,66 +51,29 @@ public class CheckFlights extends AppCompatActivity implements Runnable {
 
         durationtime.setText(departuredate + " / " + returndate);
 
+        Map<String,String> auth = new HashMap<>();
+        auth.put("Api_Key", "dc9f2d25d8491f966db4ee52982271ba90a703469573bde8f895c6e0a51cea4f");
+        SerpApi client = new SerpApi(auth);
 
+        Map<String, String> parameter = new HashMap<>();
+        parameter.put("q", "Coffee");
+        parameter.put("location", "Austin, Texas, United States");
+        parameter.put("hl", "en");
+        parameter.put("gl", "us");
+        parameter.put("google_domain", "google.com");
+        parameter.put("api_key", "dc9f2d25d8491f966db4ee52982271ba90a703469573bde8f895c6e0a51cea4f");
 
-
-    }
-
-
-    private static final String AUTHORIZATION_HEADER = "Authorization";
-    public static final String USERNAME = "USERNAME";
-    public static final String PASSWORD = "PASSWORD";
-
-    public void run() {
-        JSONObject jsonObject = new JSONObject();
         try {
-            jsonObject.put("source", "google_search");
-            jsonObject.put("query", "adidas");
-            jsonObject.put("geo_location", "California,United States");
-            jsonObject.put("parse", true);
-
-        } catch (JSONException e) {
-            Log.e("Error", " Error parsing website", e);
+            JsonObject results = client.search(parameter);
+            Log.i("Results", results.toString());
+        } catch (SerpApiException e) {
+            Log.e("Error","It didnt Work");
             throw new RuntimeException(e);
         }
 
-        Authenticator authenticator = (route, response) -> {
-            String credential = Credentials.basic(USERNAME, PASSWORD);
-            return response
-                    .request()
-                    .newBuilder()
-                    .header(AUTHORIZATION_HEADER, credential)
-                    .build();
-        };
 
-        OkHttpClient client = new OkHttpClient.Builder()
-                .authenticator(authenticator)
-                .readTimeout(180, TimeUnit.SECONDS)
-                .build();
-
-        MediaType mediaType = MediaType.parse("application/json; charset=utf-8");
-        RequestBody body = RequestBody.create(jsonObject.toString(), mediaType);
-        Request request = new Request.Builder()
-                .url("https://realtime.oxylabs.io/v1/queries")
-                .post(body)
-                .build();
-
-        try (Response response = client.newCall(request).execute()) {
-            if (response.body() != null) {
-                try (ResponseBody responseBody = response.body()) {
-                    System.out.println(responseBody.string());
-                }
-            }
-        } catch (Exception exception) {
-            System.out.println("Error: " + exception.getMessage());
-        }
-
-        System.exit(0);
     }
 
-    public static void main(String[] args) {
-        new Thread(new CheckFlights()).start();
-    }
 }
 
 

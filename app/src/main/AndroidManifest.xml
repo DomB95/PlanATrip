@@ -26,6 +26,11 @@
             android:exported="true">
         </activity>
         <activity
+            android:name=".CheckHotels"
+            android:exported="true">
+
+        </activity>
+        <activity
             android:name=".PlanATrip"
             android:exported = "true">
 

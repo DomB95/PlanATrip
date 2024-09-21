@@ -7,6 +7,9 @@ import android.content.SharedPreferences;
 
 public class SharedPref
 {   private static SharedPreferences profiledata;
+    public static final String Username = "username";
+    public static final String Email = "email";
+    public static final String Password = "password";
     public static final String TripName = "tripname";
     public static final String FromDes = "fromdes";
     public static final String Destin = "todes";

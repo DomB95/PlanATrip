@@ -44,7 +44,7 @@ public class MainMenuScreen extends Activity {
         hotelbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent newscreen = new Intent(MainMenuScreen.this, PlanATrip.class);
+                Intent newscreen = new Intent(MainMenuScreen.this, HotelCheck.class);
                 startActivity(newscreen);
 
             }
