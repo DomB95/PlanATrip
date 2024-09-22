@@ -83,6 +83,7 @@ public class CheckHotels extends AppCompatActivity {
                    for(int i = 0; i < places.size(); i++){
                        Log.i("Place", places.get(i).toString());
                    }
+
                 });
 
 
