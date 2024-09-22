@@ -40,6 +40,11 @@
             android:exported="true">
 
         </activity>
+        <activity
+            android:name=".HotelCheck"
+            android:exported="true">
+
+        </activity>
 
         <activity
             android:name=".login"

@@ -38,7 +38,7 @@ public class PlanATrip extends AppCompatActivity {
         nextscreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent newscreen = new Intent(PlanATrip.this, CheckFlights.class);
+                Intent newscreen = new Intent(PlanATrip.this, CheckHotels.class);
                 startActivity(newscreen);
             }
         });

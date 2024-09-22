@@ -206,7 +206,7 @@
                         android:fontFamily="@font/reenie_beanie"
                         android:gravity="center"
                         android:padding="@dimen/cardview_compat_inset_shadow"
-                        android:text="NearbyActivities"
+                        android:text="CheckActivities"
                         android:textColor="@color/white"
                         android:textSize="44dp" />
 
@@ -294,7 +294,7 @@
                         android:fontFamily="@font/reenie_beanie"
                         android:gravity="center"
                         android:padding="@dimen/cardview_compat_inset_shadow"
-                        android:text="CheckTrips"
+                        android:text="What'sNearby"
                         android:textColor="@color/white"
                         android:textSize="44dp" />
 

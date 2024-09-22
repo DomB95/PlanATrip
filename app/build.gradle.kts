@@ -37,7 +37,7 @@ buildFeatures {
 
 dependencies {
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
-    implementation("com.google.android.libraries.places:places:3.5.0")
+    implementation("com.google.android.libraries.places:places:4.0.0")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -66,10 +66,10 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
     implementation ("com.google.android.material:material:1.12.0")
-    implementation ("com.google.android.gms:play-services-maps:17.0.0")
-    implementation ("com.google.android.gms:play-services-location:17.0.0")
-    implementation ("com.google.android.gms:play-services-places:17.0.0")
-    implementation ("com.google.android.libraries.places:places:1.1.0")
+    implementation ("com.google.android.gms:play-services-maps:19.0.0")
+    implementation ("com.google.android.gms:play-services-location:21.3.0")
+    implementation ("com.google.android.gms:play-services-places:17.1.0")
+    implementation ("com.google.android.libraries.places:places:4.0.0")
 
 
 }

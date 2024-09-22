@@ -1,20 +1,25 @@
 package com.example.planatrip;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.location.Geocoder;
 import android.os.Bundle;
 import android.service.controls.actions.FloatAction;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
-public class HotelCheck extends Activity {
+public class HotelCheck extends AppCompatActivity {
 
     EditText hotellocation;
-    FloatingActionButton nextscreen;
+    Button hotelsearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -22,10 +27,12 @@ public class HotelCheck extends Activity {
         setContentView(R.layout.hotelchecker);
 
         SharedPref.init(getApplicationContext());
-        nextscreen = findViewById(R.id.searchhotels);
-        nextscreen.setOnClickListener(new View.OnClickListener() {
+
+
+        hotelsearch = (Button) findViewById(R.id.searchhotels);
+        hotelsearch.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 Intent newscreen = new Intent(HotelCheck.this, CheckHotels.class);
                 startActivity(newscreen);
             }
@@ -46,6 +53,12 @@ public class HotelCheck extends Activity {
         SharedPref.write(SharedPref.CityName, location);
 
         Log.i("Saved cityname", location);
+
+
+
+
+
+
 
 
 
