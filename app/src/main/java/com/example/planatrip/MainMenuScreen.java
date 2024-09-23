@@ -63,7 +63,7 @@ public class MainMenuScreen extends Activity {
         foodbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent newscreen = new Intent(MainMenuScreen.this, PlanATrip.class);
+                Intent newscreen = new Intent(MainMenuScreen.this, FoodSelecter.class);
                 startActivity(newscreen);
             }
         });

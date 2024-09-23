@@ -4,6 +4,10 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Set;
+
 
 public class SharedPref
 {   private static SharedPreferences profiledata;
@@ -16,6 +20,9 @@ public class SharedPref
     public static final String departdate = "departure";
     public static final String Returndate = "return";
     public static final String CityName = "cityname";
+
+
+
 
 
     public static void init(Context context)
@@ -56,6 +63,19 @@ public class SharedPref
 
 
     }
+
+    public static void write(String key, Set<String> value){
+        SharedPreferences.Editor  prefsEditor = profiledata.edit();
+        prefsEditor.putStringSet(key, value);
+        prefsEditor.apply();
+    }
+
+    public static Set<String> read(String key, Set<String> defValue){
+        return profiledata.getStringSet(key, defValue);
+    }
+
+
+
 
     public static void clear(){
         SharedPreferences.Editor prefsEditor = profiledata.edit();

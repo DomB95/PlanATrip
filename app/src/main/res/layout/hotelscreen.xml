@@ -73,7 +73,7 @@
                 </TextView>
 
                 <TextView
-                    android:id="@+id/durantionflight"
+                    android:id="@+id/durantionHotels"
                     android:layout_width="184dp"
                     android:layout_height="45dp"
                     android:fontFamily="@font/reenie_beanie"
@@ -97,13 +97,13 @@
                     android:elevation="30dp"
                     android:background="@color/white">
 
-                    <ImageView
+                    <TextView
                         android:id="@+id/hotel1"
                         android:layout_width="200dp"
                         android:layout_height="100dp"
                         android:scaleType="centerCrop">
 
-                    </ImageView>
+                    </TextView>
 
                 </androidx.cardview.widget.CardView>
 
@@ -141,13 +141,13 @@
                     android:elevation="30dp"
                     android:background="@color/white">
 
-                    <ImageView
+                    <TextView
                         android:id="@+id/hotel2"
                         android:layout_width="200dp"
                         android:layout_height="100dp"
                         android:scaleType="centerCrop">
 
-                    </ImageView>
+                    </TextView>
 
                 </androidx.cardview.widget.CardView>
 
@@ -184,13 +184,13 @@
                     android:elevation="30dp"
                     android:background="@color/white">
 
-                    <ImageView
+                    <TextView
                         android:id="@+id/hotel3"
                         android:layout_width="200dp"
                         android:layout_height="100dp"
                         android:scaleType="centerCrop">
 
-                    </ImageView>
+                    </TextView>
 
                 </androidx.cardview.widget.CardView>
 
@@ -227,13 +227,13 @@
                     android:elevation="30dp"
                     android:background="@color/white">
 
-                    <ImageView
+                    <TextView
                         android:id="@+id/hotel4"
                         android:layout_width="200dp"
                         android:layout_height="100dp"
                         android:scaleType="centerCrop">
 
-                    </ImageView>
+                    </TextView>
 
                 </androidx.cardview.widget.CardView>
 
@@ -270,13 +270,13 @@
                     android:elevation="30dp"
                     android:background="@color/white">
 
-                    <ImageView
+                    <TextView
                         android:id="@+id/hotel5"
                         android:layout_width="200dp"
                         android:layout_height="100dp"
                         android:scaleType="centerCrop">
 
-                    </ImageView>
+                    </TextView>
 
                 </androidx.cardview.widget.CardView>
 
@@ -313,13 +313,13 @@
                     android:elevation="30dp"
                     android:background="@color/white">
 
-                    <ImageView
+                    <TextView
                         android:id="@+id/hotel6"
                         android:layout_width="200dp"
                         android:layout_height="100dp"
                         android:scaleType="centerCrop">
 
-                    </ImageView>
+                    </TextView>
 
                 </androidx.cardview.widget.CardView>
 

@@ -33,10 +33,10 @@ public class CheckFlights extends AppCompatActivity  {
         setContentView(R.layout.flightscreen);
         SharedPref.init(getApplicationContext());
 
-        String _tripname = SharedPref.read(SharedPref.TripName, null);
-        String departcode = SharedPref.read(SharedPref.FromDes, null);
-        String destinationcode = SharedPref.read(SharedPref.Destin, null);
-        String citydestination = SharedPref.read(SharedPref.CityName, null);
+        String _tripname = SharedPref.read(SharedPref.TripName, (String) null);
+        String departcode = SharedPref.read(SharedPref.FromDes, (String) null);
+        String destinationcode = SharedPref.read(SharedPref.Destin, (String) null);
+        String citydestination = SharedPref.read(SharedPref.CityName, (String) null);
 
         cityname = findViewById(R.id.destinationname);
         cityname.setText(citydestination);
@@ -44,8 +44,8 @@ public class CheckFlights extends AppCompatActivity  {
         tripname = findViewById(R.id.Tripnammeflight);
         tripname.setText(_tripname);
 
-        String returndate = SharedPref.read(SharedPref.Returndate, null);
-        String departuredate = SharedPref.read(SharedPref.departdate, null);
+        String returndate = SharedPref.read(SharedPref.Returndate, (String) null);
+        String departuredate = SharedPref.read(SharedPref.departdate, (String) null);
 
         durationtime = findViewById(R.id.durantionflight);
 

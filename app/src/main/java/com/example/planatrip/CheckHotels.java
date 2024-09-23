@@ -1,7 +1,10 @@
 package com.example.planatrip;
 
+import static android.content.ContentValues.TAG;
+
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.location.Address;
 import android.location.Geocoder;
 import android.media.Image;
@@ -24,10 +27,13 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.libraries.places.api.Places;
 import com.google.android.libraries.places.api.model.CircularBounds;
+import com.google.android.libraries.places.api.model.PhotoMetadata;
 import com.google.android.libraries.places.api.model.Place;
+import com.google.android.libraries.places.api.net.FetchPhotoRequest;
 import com.google.android.libraries.places.api.net.PlacesClient;
 import com.google.android.libraries.places.api.net.SearchByTextRequest;
 import com.google.android.libraries.places.api.net.SearchNearbyRequest;
@@ -39,9 +45,16 @@ import java.util.Locale;
 
 
 public class CheckHotels extends AppCompatActivity {
+
+    LocationFinder locationfinder = new LocationFinder();
     String apiKey = BuildConfig.PLACES_API_KEY;
 
     ImageView hotelimageone;
+    TextView secondhotelinfo;
+    TextView thirdhotelinfo;
+    TextView fourthhotelinfo;
+    TextView Fifthhotelinfo;
+    TextView Sixthhotelinfo;
     TextView   hotelnameone;
 
 
@@ -60,15 +73,15 @@ public class CheckHotels extends AppCompatActivity {
         // Create a new PlacesClient instance
         PlacesClient placesClient = Places.createClient(this);
 
-        String hotellocation = SharedPref.read(SharedPref.CityName, null);
-        hotelimageone = findViewById(R.id.hotel1);
+        String hotellocation = SharedPref.read(SharedPref.CityName, (String) null);
+
         hotelnameone = findViewById(R.id.firsthoteltextresponse);
 
 
-       String coord =  determineLatLngFromAddress(this,hotellocation).toString();
+       String coord =  locationfinder.GetLongLatFromAdress(this,hotellocation).toString();
        Log.i("City Coord", coord);
 
-       LatLng citycoord = determineLatLngFromAddress(this, hotellocation);
+       LatLng citycoord = locationfinder.GetLongLatFromAdress(this, hotellocation);
 
 
 
@@ -85,47 +98,36 @@ public class CheckHotels extends AppCompatActivity {
                         .build();
 
         placesClient.searchNearby(searchNearbyRequest)
-                .addOnSuccessListener(response->{
+                .addOnSuccessListener(response-> {
                     List<Place> places = response.getPlaces();
-                   for(int i = 0; i < places.size(); i++){
+                    for (int i = 0; i < places.size(); i++) {
 
 
-                       Log.i("Place", places.get(i).toString());
+                        Log.i("Place", places.get(i).toString());
 
 
-                   }
-                  String firstcityname = places.get(0).getDisplayName().toString();
-                  String firsthotelimage = places.get(0).getIconUrl();
-                  Picasso.get().load(firsthotelimage).into(hotelimageone);
-                  hotelnameone.setText(firstcityname);
+                    }
+                    String firsthotelname = places.get(0).getDisplayName().toString();
+                    String secondhotelname = places.get(1).getDisplayName().toString();
+                    String thirdhotelname = places.get(2).getDisplayName().toString();
+                    String fourthhotelname = places.get(3).getDisplayName().toString();
+                    String fifthhotelname = places.get(4).getDisplayName().toString();
+                    String Sixthhotelname = places.get(5).getDisplayName().toString();
 
+
+                    hotelnameone.setText(firsthotelname);
 
                 });
 
 
 
 
+
+
+
+
     }
 
-    public LatLng determineLatLngFromAddress(Context appContext, String strAddress) {
-        LatLng latLng = null;
-        Geocoder geocoder = new Geocoder(appContext, Locale.getDefault());
-        List<Address> geoResults = null;
 
-        try {
-            geoResults = geocoder.getFromLocationName(strAddress, 1);
-            while (geoResults.size()==0) {
-                geoResults = geocoder.getFromLocationName(strAddress, 1);
-            }
-            if (geoResults.size()>0) {
-                Address addr = geoResults.get(0);
-                latLng = new LatLng(addr.getLatitude(),addr.getLongitude());
-            }
-        } catch (Exception e) {
-            System.out.print(e.getMessage());
-        }
-
-        return latLng; //LatLng value of address
-    }
 
 }

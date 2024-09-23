@@ -24,18 +24,18 @@
 
     <EditText
         android:id="@+id/hotellocationtext"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_width="418dp"
+        android:layout_height="73dp"
+        android:fontFamily="@font/reenie_beanie"
         android:hint="Hotel Location"
         android:textColor="@color/black"
         android:textSize="40sp"
-        android:fontFamily="@font/reenie_beanie"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.543" />
+        app:layout_constraintVertical_bias="0.314" />
 
     <Button
         android:id="@+id/searchhotels"
@@ -44,10 +44,9 @@
         android:text="Look For Hotels"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hotellocationtext"
-        app:layout_constraintVertical_bias="0.58" />
+        app:layout_constraintVertical_bias="0.909" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

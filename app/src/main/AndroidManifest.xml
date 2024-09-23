@@ -45,7 +45,19 @@
             android:exported="true">
 
         </activity>
+        <activity
+            android:name=".FoodSelecter"
+            android:exported="true">
 
+        </activity>
+        <activity android:name=".CheckRestuarants"
+            android:exported="true">
+
+        </activity>
+<activity android:name=".CheckActivities"
+    android:exported="true">
+
+</activity>
         <activity
             android:name=".login"
             android:exported="true">
