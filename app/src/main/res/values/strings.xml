@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">PlanATrip</string>
     <string name="checkflights">Flights</string>
+    <string name="checkhotels">Hotels</string>
 </resources>

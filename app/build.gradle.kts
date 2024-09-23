@@ -36,6 +36,7 @@ buildFeatures {
 }
 
 dependencies {
+    implementation ("com.squareup.picasso:picasso:2.8")
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
     implementation("com.google.android.libraries.places:places:4.0.0")
     implementation(libs.appcompat)

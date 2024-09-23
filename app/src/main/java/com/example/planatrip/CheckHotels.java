@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.location.Address;
 import android.location.Geocoder;
+import android.media.Image;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,8 +13,10 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.text.TextWatcher;
 import android.widget.EditText;
@@ -28,6 +31,7 @@ import com.google.android.libraries.places.api.model.Place;
 import com.google.android.libraries.places.api.net.PlacesClient;
 import com.google.android.libraries.places.api.net.SearchByTextRequest;
 import com.google.android.libraries.places.api.net.SearchNearbyRequest;
+import com.squareup.picasso.Picasso;
 
 import java.util.Arrays;
 import java.util.List;
@@ -36,9 +40,10 @@ import java.util.Locale;
 
 public class CheckHotels extends AppCompatActivity {
     String apiKey = BuildConfig.PLACES_API_KEY;
-    double citynort = 0;
-    double citywest = 0;
-    String coord = String.valueOf(citynort) +" ," + String.valueOf(citywest);
+
+    ImageView hotelimageone;
+    TextView   hotelnameone;
+
 
 
 
@@ -56,6 +61,8 @@ public class CheckHotels extends AppCompatActivity {
         PlacesClient placesClient = Places.createClient(this);
 
         String hotellocation = SharedPref.read(SharedPref.CityName, null);
+        hotelimageone = findViewById(R.id.hotel1);
+        hotelnameone = findViewById(R.id.firsthoteltextresponse);
 
 
        String coord =  determineLatLngFromAddress(this,hotellocation).toString();
@@ -65,7 +72,7 @@ public class CheckHotels extends AppCompatActivity {
 
 
 
-        final List<Place.Field> placefields = Arrays.asList(Place.Field.DISPLAY_NAME);
+        final List<Place.Field> placefields = Arrays.asList(Place.Field.ID,Place.Field.DISPLAY_NAME);
 
         CircularBounds circle = CircularBounds. newInstance(citycoord,1000);
 
@@ -74,15 +81,24 @@ public class CheckHotels extends AppCompatActivity {
         final SearchNearbyRequest searchNearbyRequest =
                 SearchNearbyRequest.builder(circle,placefields)
                         .setIncludedTypes(includedTypes)
-                        .setMaxResultCount(10)
+                        .setMaxResultCount(6)
                         .build();
 
         placesClient.searchNearby(searchNearbyRequest)
                 .addOnSuccessListener(response->{
                     List<Place> places = response.getPlaces();
                    for(int i = 0; i < places.size(); i++){
+
+
                        Log.i("Place", places.get(i).toString());
+
+
                    }
+                  String firstcityname = places.get(0).getDisplayName().toString();
+                  String firsthotelimage = places.get(0).getIconUrl();
+                  Picasso.get().load(firsthotelimage).into(hotelimageone);
+                  hotelnameone.setText(firstcityname);
+
 
                 });
 
