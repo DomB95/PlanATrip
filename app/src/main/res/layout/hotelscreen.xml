@@ -60,7 +60,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/destinationname"
+                    android:id="@+id/hoteldestinationname"
                     android:layout_width="210dp"
                     android:layout_height="45dp"
                     android:layout_gravity="left"
@@ -88,19 +88,19 @@
             <LinearLayout
                 android:id="@+id/firstresponse"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="175dp"
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
                     android:elevation="30dp"
                     android:background="@color/white">
 
                     <TextView
                         android:id="@+id/hotel1"
-                        android:layout_width="200dp"
-                        android:layout_height="100dp"
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
                         android:scaleType="centerCrop">
 
                     </TextView>
@@ -108,15 +108,15 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="261dp"
-                    android:layout_height="100dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:elevation="30dp"
                     android:background="@color/white">
 
                     <TextView
                         android:id="@+id/firsthoteltextresponse"
-                        android:layout_width="236dp"
-                        android:layout_height="104dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:backgroundTint="#000000"
                         android:fontFamily="@font/reenie_beanie"
@@ -132,19 +132,19 @@
             <LinearLayout
                 android:id="@+id/secondresponse"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="175dp"
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
                     android:elevation="30dp"
                     android:background="@color/white">
 
                     <TextView
                         android:id="@+id/hotel2"
-                        android:layout_width="200dp"
-                        android:layout_height="100dp"
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
                         android:scaleType="centerCrop">
 
                     </TextView>
@@ -152,15 +152,15 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="261dp"
-                    android:layout_height="100dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:elevation="30dp"
                     android:background="@color/white">
 
                     <TextView
                         android:id="@+id/secondhoteltextresponse"
-                        android:layout_width="236dp"
-                        android:layout_height="104dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:backgroundTint="#000000"
                         android:fontFamily="@font/reenie_beanie"
@@ -175,19 +175,19 @@
             <LinearLayout
                 android:id="@+id/thirdresponse"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="175dp"
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
                     android:elevation="30dp"
                     android:background="@color/white">
 
                     <TextView
                         android:id="@+id/hotel3"
-                        android:layout_width="200dp"
-                        android:layout_height="100dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:scaleType="centerCrop">
 
                     </TextView>
@@ -195,22 +195,22 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="261dp"
-                    android:layout_height="100dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:elevation="30dp"
                     android:background="@color/white">
 
                     <TextView
-                        android:id="@+id/thirdtextresponse"
-                        android:layout_width="236dp"
-                        android:layout_height="104dp"
+                        android:id="@+id/thirdhoteltextresponse"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:backgroundTint="#000000"
                         android:fontFamily="@font/reenie_beanie"
                         android:gravity="center"
                         android:padding="@dimen/cardview_compat_inset_shadow"
                         android:textColor="@color/black"
-                        android:textSize="44dp" />
+                        android:textSize="30dp" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -218,19 +218,19 @@
             <LinearLayout
                 android:id="@+id/fourthresponse"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="175dp"
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
                     android:elevation="30dp"
                     android:background="@color/white">
 
                     <TextView
                         android:id="@+id/hotel4"
-                        android:layout_width="200dp"
-                        android:layout_height="100dp"
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
                         android:scaleType="centerCrop">
 
                     </TextView>
@@ -238,22 +238,22 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="261dp"
-                    android:layout_height="100dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:elevation="30dp"
                     android:background="@color/white">
 
                     <TextView
                         android:id="@+id/fourthhoteltextresponse"
-                        android:layout_width="236dp"
-                        android:layout_height="104dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:backgroundTint="#000000"
                         android:fontFamily="@font/reenie_beanie"
                         android:gravity="center"
                         android:padding="@dimen/cardview_compat_inset_shadow"
                         android:textColor="@color/black"
-                        android:textSize="44dp" />
+                        android:textSize="30dp" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -261,19 +261,19 @@
             <LinearLayout
                 android:id="@+id/fifthresponse"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="175dp"
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
                     android:elevation="30dp"
                     android:background="@color/white">
 
                     <TextView
                         android:id="@+id/hotel5"
-                        android:layout_width="200dp"
-                        android:layout_height="100dp"
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
                         android:scaleType="centerCrop">
 
                     </TextView>
@@ -281,58 +281,15 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="261dp"
-                    android:layout_height="100dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:elevation="30dp"
                     android:background="@color/white">
 
                     <TextView
                         android:id="@+id/fifthhoteltextresponse"
-                        android:layout_width="236dp"
-                        android:layout_height="104dp"
-                        android:layout_gravity="center"
-                        android:backgroundTint="#000000"
-                        android:fontFamily="@font/reenie_beanie"
-                        android:gravity="center"
-                        android:padding="@dimen/cardview_compat_inset_shadow"
-                        android:textColor="@color/black"
-                        android:textSize="44dp" />
-
-                </androidx.cardview.widget.CardView>
-
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/sixthhotelresponse"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:orientation="horizontal">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:elevation="30dp"
-                    android:background="@color/white">
-
-                    <TextView
-                        android:id="@+id/hotel6"
-                        android:layout_width="200dp"
-                        android:layout_height="100dp"
-                        android:scaleType="centerCrop">
-
-                    </TextView>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="261dp"
-                    android:layout_height="100dp"
-                    android:elevation="30dp"
-                    android:background="@color/white">
-
-                    <TextView
-                        android:id="@+id/sixthhoteltextresponse"
-                        android:layout_width="236dp"
-                        android:layout_height="104dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:backgroundTint="#000000"
                         android:fontFamily="@font/reenie_beanie"

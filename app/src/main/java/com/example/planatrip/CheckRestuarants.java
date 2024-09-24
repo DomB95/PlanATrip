@@ -26,7 +26,7 @@ public class CheckRestuarants extends Activity {
     List<String> excludedshops = new ArrayList<String>();
     LatLng center;
     String apiKey = BuildConfig.PLACES_API_KEY;
-
+    LocationFinder locateadress = new LocationFinder();
     TextView location;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class CheckRestuarants extends Activity {
 
         PlacesClient placesClient = Places.createClient(this);
 
-        LocationFinder locateadress = new LocationFinder();
+
 
         SharedPref.init(getApplicationContext());
         location = findViewById(R.id.fooddestinationname);

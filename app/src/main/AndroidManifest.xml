@@ -54,7 +54,14 @@
             android:exported="true">
 
         </activity>
-<activity android:name=".CheckActivities"
+        <activity
+
+            android:name=".ActivitySelector"
+            android:exported="true">
+
+        </activity>
+<activity
+    android:name=".CheckActivities"
     android:exported="true">
 
 </activity>

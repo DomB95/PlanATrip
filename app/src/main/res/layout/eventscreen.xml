@@ -1,6 +1,327 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/silver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:orientation="vertical">
+
+            <Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/black">
+
+            </Toolbar>
+
+            <LinearLayout
+                android:id="@+id/FoodInfofield"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/black"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/reenie_beanie"
+                    android:gravity="left"
+                    android:text="Activities"
+                    android:textColor="@color/white"
+                    android:textSize="35sp">
+                </TextView>
+                <Button
+                    android:id="@+id/acthomebutton"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/reenie_beanie"
+                    android:textColor="@color/black"
+                    android:text="Home"
+                    android:textSize="30sp">
+
+                </Button>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Infoactfield2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/black"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/activitydestinationname"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/reenie_beanie"
+                    android:gravity="left"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="35sp">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/firstresponse"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:elevation="30dp">
+
+                    <TextView
+                        android:id="@+id/act1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:fontFamily="@font/reenie_beanie"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        >
+
+                    </TextView>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/silver"
+                    android:elevation="30dp">
+
+                    <TextView
+                        android:id="@+id/firstacttextresponse"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:backgroundTint="#000000"
+                        android:fontFamily="@font/reenie_beanie"
+                        android:gravity="center"
+                        android:padding="@dimen/cardview_compat_inset_shadow"
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/secondresponse"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:elevation="30dp">
+
+                    <TextView
+                        android:id="@+id/act2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/reenie_beanie"
+                        android:scaleType="centerCrop"
+                        android:textStyle="bold"
+                        android:textSize="30sp">
+
+                    </TextView>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:elevation="30dp">
+
+                    <TextView
+                        android:id="@+id/secondacttextresponse"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:backgroundTint="#000000"
+                        android:fontFamily="@font/reenie_beanie"
+                        android:gravity="center"
+                        android:padding="@dimen/cardview_compat_inset_shadow"
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/thirdresponse"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:elevation="30dp">
+
+                    <TextView
+                        android:id="@+id/act3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/reenie_beanie"
+                        android:scaleType="centerCrop"
+                        android:textSize="30sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:elevation="30dp">
+
+                    <TextView
+                        android:id="@+id/thirdacttextresponse"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:backgroundTint="#000000"
+                        android:fontFamily="@font/reenie_beanie"
+                        android:gravity="center"
+                        android:padding="@dimen/cardview_compat_inset_shadow"
+                        android:textColor="@color/black"
+                        android:textSize="30dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fourthresponse"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:elevation="30dp">
+
+                    <TextView
+                        android:id="@+id/act4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/reenie_beanie"
+                        android:scaleType="centerCrop"
+                        android:textSize="30sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:elevation="30dp">
+
+                    <TextView
+                        android:id="@+id/fourthacttextresponse"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:backgroundTint="#000000"
+                        android:fontFamily="@font/reenie_beanie"
+                        android:gravity="center"
+                        android:padding="@dimen/cardview_compat_inset_shadow"
+                        android:textColor="@color/black"
+                        android:textSize="30dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fifthresponse"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:elevation="30dp">
+
+                    <TextView
+                        android:id="@+id/act5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/reenie_beanie"
+                        android:scaleType="centerCrop"
+                        android:textSize="30sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:elevation="30dp">
+
+                    <TextView
+                        android:id="@+id/fifthacttextresponse"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:backgroundTint="#000000"
+                        android:fontFamily="@font/reenie_beanie"
+                        android:gravity="center"
+                        android:padding="@dimen/cardview_compat_inset_shadow"
+                        android:textColor="@color/black"
+                        android:textSize="30dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

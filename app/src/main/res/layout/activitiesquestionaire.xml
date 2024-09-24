@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/black">
+
+        </Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/black">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/reenie_beanie"
+                android:text="Activities"
+                android:textColor="@color/white"
+                android:textSize="50sp">
+
+            </TextView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:fontFamily="@font/reenie_beanie"
+        android:gravity="center"
+        android:text="Select what type of activities you want included.
+        (Nonselected will be excluded)"
+        android:textSize="35sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.272" />
+
+    <CheckBox
+        android:id="@+id/amusement_center"
+        android:layout_width="119dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="304dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/reenie_beanie"
+        android:text="AmusementPark"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/casino"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/aquarium"
+        android:layout_width="104dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="144dp"
+        android:fontFamily="@font/reenie_beanie"
+        android:text="Aquarium"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/event_venue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/amusement_center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.983"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/bar"
+        android:layout_width="105dp"
+        android:layout_height="52dp"
+        android:fontFamily="@font/reenie_beanie"
+        android:text="Nearby Bars"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/golf_course"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.975"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/casino"
+        android:layout_width="118dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/reenie_beanie"
+        android:text="Casino"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/night_club"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/night_club"
+        android:layout_width="119dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/reenie_beanie"
+        android:text="Night Club"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/shopping_mall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.997"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <CheckBox
+        android:id="@+id/event_venue"
+        android:layout_width="106dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/reenie_beanie"
+        android:text="Event Venues"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toEndOf="@+id/casino"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.971"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/golf_course"
+        android:layout_width="107dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/reenie_beanie"
+        android:text="Golf Course"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/zoo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toEndOf="@+id/shopping_mall"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.991" />
+
+    <CheckBox
+        android:id="@+id/shopping_mall"
+        android:layout_width="100dp"
+        android:layout_height="52dp"
+        android:fontFamily="@font/reenie_beanie"
+        android:text="Mall"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/jewelry_store"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/bowling_alley"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:fontFamily="@font/reenie_beanie"
+        android:text="Bowling Alley"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toEndOf="@+id/aquarium"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.336" />
+
+    <CheckBox
+        android:id="@+id/zoo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="124dp"
+        android:fontFamily="@font/reenie_beanie"
+        android:text="Zoo"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintStart_toEndOf="@+id/jewelry_store"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.796" />
+
+    <CheckBox
+        android:id="@+id/museum"
+        android:layout_width="113dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/reenie_beanie"
+        android:text="Museum"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/sports_complex"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.981"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/sports_complex"
+        android:layout_width="89dp"
+        android:layout_height="48dp"
+        android:fontFamily="@font/reenie_beanie"
+        android:text="Sports Complex"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.723"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/movie_theater"
+        android:layout_width="114dp"
+        android:layout_height="48dp"
+        android:fontFamily="@font/reenie_beanie"
+        android:text="Movies"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/event_venue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.535" />
+
+    <CheckBox
+        android:id="@+id/jewelry_store"
+        android:layout_width="94dp"
+        android:layout_height="54dp"
+        android:fontFamily="@font/reenie_beanie"
+        android:text="Jewerly Stores"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.79" />
+
+    <Button
+        android:id="@+id/activitysearchbutton"
+        android:layout_width="330dp"
+        android:layout_height="99dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/reenie_beanie"
+        android:text="Look for Activities"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.955" />
+
+    <EditText
+        android:id="@+id/foodlocationtext"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:ems="10"
+        android:fontFamily="@font/reenie_beanie"
+        android:hint="Address or Location"
+        android:inputType="text"
+        android:outlineAmbientShadowColor="#040202"
+        android:outlineSpotShadowColor="#000000"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
