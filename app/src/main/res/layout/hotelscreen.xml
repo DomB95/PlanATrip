@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -85,33 +87,31 @@
             </LinearLayout>
 
 
-            <LinearLayout
+            <androidx.cardview.widget.CardView
                 android:id="@+id/firstresponse"
                 android:layout_width="match_parent"
                 android:layout_height="175dp"
                 android:orientation="horizontal">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="170dp"
-                    android:layout_height="match_parent"
-                    android:elevation="30dp"
-                    android:background="@color/white">
-
                     <TextView
                         android:id="@+id/hotel1"
                         android:layout_width="170dp"
                         android:layout_height="match_parent"
-                        android:scaleType="centerCrop">
+                        android:scaleType="centerCrop"
+                        android:fontFamily="@font/reenie_beanie"
+                        android:textSize="35sp">
 
                     </TextView>
-
-                </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:elevation="30dp"
-                    android:background="@color/white">
+                    android:background="@color/white"
+                    app:expandOnClick="true"
+                    app:startExpanded="false"
+                    app:inner_view="@layout/firstresponse"
+                    tools:ignore="MissingClass">
 
                     <TextView
                         android:id="@+id/firsthoteltextresponse"
@@ -127,7 +127,7 @@
 
                 </androidx.cardview.widget.CardView>
 
-            </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <LinearLayout
                 android:id="@+id/secondresponse"
@@ -145,7 +145,8 @@
                         android:id="@+id/hotel2"
                         android:layout_width="170dp"
                         android:layout_height="match_parent"
-                        android:scaleType="centerCrop">
+                        android:scaleType="centerCrop"
+                        android:fontFamily="@font/reenie_beanie">
 
                     </TextView>
 
@@ -167,7 +168,7 @@
                         android:gravity="center"
                         android:padding="@dimen/cardview_compat_inset_shadow"
                         android:textColor="@color/black"
-                        android:textSize="44dp" />
+                        android:textSize="30dp" />
 
                 </androidx.cardview.widget.CardView>
 

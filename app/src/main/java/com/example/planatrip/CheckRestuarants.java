@@ -51,6 +51,8 @@ public class CheckRestuarants extends Activity {
     StringBuilder maininfo5 = new StringBuilder();
     StringBuilder subinfo5 = new StringBuilder();
 
+    String newline = "\n";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +71,7 @@ public class CheckRestuarants extends Activity {
 
         location.setText(locationname);
 
-        maininfoact1 = (TextView) findViewById(R.id.act1);
+        /*maininfoact1 = (TextView) findViewById(R.id.act1);
         subinfoact1 = (TextView) findViewById(R.id.firstacttextresponse);
         maininfoact2 = (TextView)findViewById(R.id.act2);
         subinfoact2 = (TextView)findViewById(R.id.secondacttextresponse);
@@ -78,7 +80,7 @@ public class CheckRestuarants extends Activity {
         maininfoact4 = (TextView) findViewById(R.id.act4);
         subinfoact4 = (TextView) findViewById(R.id.fourthacttextresponse);
         maininfoact5 = (TextView) findViewById(R.id.act5);
-        subinfoact5 = (TextView) findViewById(R.id.fifthacttextresponse);
+        subinfoact5 = (TextView) findViewById(R.id.fifthacttextresponse);*/
 
 
         Set<String> included = SharedPref.read("IncludedShops", (Set<String>) null);

@@ -36,6 +36,9 @@ buildFeatures {
 }
 
 dependencies {
+
+    implementation("com.alespero:expandable-cardview:0.5")
+
     implementation ("com.squareup.picasso:picasso:2.8")
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
     implementation("com.google.android.libraries.places:places:4.0.0")
@@ -55,7 +58,7 @@ dependencies {
         implementation("com.google.firebase:firebase-firestore")
     }
     implementation("org.json:json:20240303")
-    implementation("com.github.serpapi:serpapi-java:1.0.0")
+
     implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.14")
     implementation("com.squareup.okhttp:okhttp:2.7.5")
     implementation("com.google.code.gson:gson:2.11.0")

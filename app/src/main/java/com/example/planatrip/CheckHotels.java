@@ -61,6 +61,7 @@ public class CheckHotels extends AppCompatActivity {
     TextView hotelnamefive;
     TextView hoteldestination;
 
+
     StringBuilder maininfo1 = new StringBuilder();
     StringBuilder subinfo1 = new StringBuilder();
     StringBuilder maininfo2 = new StringBuilder();
@@ -113,7 +114,7 @@ public class CheckHotels extends AppCompatActivity {
 
 
 
-        final List<Place.Field> placefields = Arrays.asList(Place.Field.DISPLAY_NAME, Place.Field.FORMATTED_ADDRESS, Place.Field.EDITORIAL_SUMMARY, Place.Field.RATING, Place.Field.NATIONAL_PHONE_NUMBER);
+        final List<Place.Field> placefields = Arrays.asList(Place.Field.DISPLAY_NAME, Place.Field.FORMATTED_ADDRESS, Place.Field.EDITORIAL_SUMMARY , Place.Field.NATIONAL_PHONE_NUMBER);
 
         CircularBounds circle = CircularBounds. newInstance(citycoord,1000);
 
@@ -131,14 +132,14 @@ public class CheckHotels extends AppCompatActivity {
                     String firsthotelname = places.get(0).getDisplayName().toString();
                     String firsthotelad = places.get(0).getFormattedAddress();
                     String firsthotelsumm = places.get(0).getEditorialSummary();
-                    String firsthotelrating = places.get(0).getRating().toString();
+
                     String firsthotelnum = places.get(0).getNationalPhoneNumber();
 
                     maininfo1.append(firsthotelname).append(newline).append(firsthotelad).append(newline).append(firsthotelnum);
 
                     hotelnameone.setText(maininfo1);
 
-                    subinfo1.append(firsthotelrating).append(newline).append(firsthotelsumm).append(newline);
+                    subinfo1.append(firsthotelsumm).append(newline);
                     firsthotelinfo.setText(subinfo1);
 
 
@@ -148,28 +149,28 @@ public class CheckHotels extends AppCompatActivity {
 
 
                     String secondplacesummary = places.get(1).getEditorialSummary();
-                    String secondactrating = places.get(1).getRating().toString();
+
 
                     maininfo2.append(secondplacename).append(newline).append(secondplacead).append(newline).append(secondplacenum);
 
                     hotelnametwo.setText(maininfo2);
 
-                    subinfo2.append(secondactrating).append(newline).append(secondplacesummary).append(newline);
+                    subinfo2.append(secondplacesummary).append(newline);
                     secondhotelinfo.setText(subinfo2);
 
-                    String thirdplacead  = places.get(2).getFormattedAddress();
+                    /*String thirdplacead  = places.get(2).getFormattedAddress();
                     String thirdplacenum = places.get(2).getNationalPhoneNumber();
                     String thirdplacename = places.get(2).getDisplayName();
 
 
                     String thirdplacesummary = places.get(2).getEditorialSummary();
-                    String thirdactrating = places.get(2).getRating().toString();
+
 
                     maininfo3.append(thirdplacename).append(newline).append(thirdplacead).append(newline).append(thirdplacenum);
 
                     hotelnamethree.setText(maininfo3);
 
-                    subinfo3.append(thirdactrating).append(newline).append(thirdplacesummary).append(newline);
+                    subinfo3.append(thirdplacesummary).append(newline);
                     thirdhotelinfo.setText(subinfo3);
 
                     String fourthplacead  = places.get(3).getFormattedAddress();
@@ -178,12 +179,12 @@ public class CheckHotels extends AppCompatActivity {
 
 
                     String fourthplacesummary = places.get(3).getEditorialSummary();
-                    String fourthactrating = places.get(3).getRating().toString();
+
                     maininfo4.append(fourthplacename).append(newline).append(fourthplacead).append(newline).append(fourthplacenum);
 
                     hotelnamefour.setText(maininfo4);
 
-                    subinfo4.append(fourthactrating).append(newline).append(fourthplacesummary).append(newline);
+                    subinfo4.append(newline).append(fourthplacesummary).append(newline);
                     fourthhotelinfo.setText(subinfo4);
                     String fifthplacead  = places.get(4).getFormattedAddress();
                     String fifthplacenum = places.get(4).getNationalPhoneNumber();
@@ -198,8 +199,8 @@ public class CheckHotels extends AppCompatActivity {
 
                     hotelnamefive.setText(maininfo5);
 
-                    subinfo5.append(fifthactrating).append(newline).append(fifthplacesummary).append(newline);
-                    Fifthhotelinfo.setText(subinfo5);
+                    subinfo5.append(fifthplacesummary).append(newline);
+                    Fifthhotelinfo.setText(subinfo5);*/
 
 
 
