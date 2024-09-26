@@ -6,47 +6,168 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="380dp"
-        android:layout_height="158dp"
-        android:fontFamily="@font/reenie_beanie"
-        android:text="Where do you want to look for hotels?"
-        android:textColor="@color/black"
-        android:textSize="40sp"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.027" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/hotellocationtext"
-        android:layout_width="418dp"
-        android:layout_height="73dp"
-        android:fontFamily="@font/reenie_beanie"
-        android:hint="Hotel Location"
-        android:textColor="@color/black"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.314" />
 
-    <Button
-        android:id="@+id/searchhotels"
-        android:layout_width="339dp"
-        android:layout_height="113dp"
-        android:text="Look For Hotels"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hotellocationtext"
-        app:layout_constraintVertical_bias="0.909" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Where do you want to look for lodging at?"
+            android:fontFamily="@font/reenie_beanie"
+            android:textSize="45dp"
+            android:layout_marginTop="25dp"
+            android:textStyle="italic|bold"/>
+
+
+        <EditText
+            android:id="@+id/hotellocationtext"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/edit_text_rounded"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="25dp"
+            android:drawablePadding="12dp"
+            android:elevation="10dp"
+            android:hint="City,State"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:fontFamily="@font/reenie_beanie"
+            android:textSize="44sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What type of lodging do you prefer?"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/reenie_beanie"
+            android:textSize="40sp"
+            android:textAlignment="center"
+            android:textStyle="italic|bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Note: what is not selected will not be included"
+            android:textStyle="italic"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/reenie_beanie"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:drawablePadding="10dp"/>
+
+
+        <CheckBox
+            android:id="@+id/bed_and_breakfast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bed and Breakfast"
+            android:fontFamily="@font/reenie_beanie"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+        <CheckBox
+            android:id="@+id/extended_stay_hotel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Extended Stay"
+            android:textSize="30sp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/reenie_beanie"
+            android:textStyle="bold"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guest House"
+            android:id="@+id/guest_house"
+            android:textSize="30sp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/reenie_beanie"
+            android:textStyle="bold"/>
+
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hotel"
+            android:id="@+id/hotel"
+            android:textSize="30sp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/reenie_beanie"
+            android:textStyle="bold"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Motel"
+            android:id="@+id/motel"
+            android:textSize="30sp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/reenie_beanie"
+            android:textStyle="bold"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Private Room/AirBnB"
+            android:id="@+id/private_guest_room"
+            android:textSize="30sp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/reenie_beanie"
+            android:textStyle="bold"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resort"
+            android:id="@+id/resort_hotel"
+            android:textSize="30sp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/reenie_beanie"
+            android:textStyle="bold"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/black"
+            android:layout_marginTop="20dp"
+            android:id="@+id/searchhotels"
+            android:text="Search for Lodging"
+            android:textStyle="bold"
+            android:fontFamily="@font/reenie_beanie"
+            android:textSize="35sp"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+    </ScrollView>
+
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

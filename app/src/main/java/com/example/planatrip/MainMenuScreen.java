@@ -21,25 +21,8 @@ public class MainMenuScreen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainscreen);
 
-       Button planbutton = (Button) findViewById(R.id.plantripbutton);
-       planbutton.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
 
-               Intent newscreen = new Intent(MainMenuScreen.this, PlanATrip.class);
-               startActivity(newscreen);
 
-           }
-       });
-       Button checkflightsbutton = (Button) findViewById(R.id.CheckFlightsbutton);
-       checkflightsbutton.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               Intent newscreen = new Intent(MainMenuScreen.this, PlanATrip.class);
-               startActivity(newscreen);
-
-           }
-       });
         Button hotelbutton = (Button) findViewById(R.id.checkhotelsbutton);
         hotelbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,14 +52,7 @@ public class MainMenuScreen extends Activity {
         });
 
 
-        Button itinaraybutton = (Button) findViewById(R.id.checktripsbutton);
-        itinaraybutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent newscreen = new Intent(MainMenuScreen.this, PlanATrip.class);
-                startActivity(newscreen);
-            }
-        });
+
 
 
 

@@ -107,11 +107,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:elevation="30dp"
-                    android:background="@color/white"
-                    app:expandOnClick="true"
-                    app:startExpanded="false"
-                    app:inner_view="@layout/firstresponse"
-                    tools:ignore="MissingClass">
+                    android:background="@color/white">
 
                     <TextView
                         android:id="@+id/firsthoteltextresponse"

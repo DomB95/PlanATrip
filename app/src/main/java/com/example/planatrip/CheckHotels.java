@@ -38,7 +38,7 @@ import com.google.android.libraries.places.api.net.FetchPhotoRequest;
 import com.google.android.libraries.places.api.net.PlacesClient;
 import com.google.android.libraries.places.api.net.SearchByTextRequest;
 import com.google.android.libraries.places.api.net.SearchNearbyRequest;
-import com.squareup.picasso.Picasso;
+
 
 import java.util.Arrays;
 import java.util.List;
