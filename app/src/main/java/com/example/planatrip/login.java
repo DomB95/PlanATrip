@@ -31,52 +31,28 @@ import com.google.android.gms.maps.SupportMapFragment;
 
 
 public class login extends AppCompatActivity {
-        LocationFinder locationfinder = new LocationFinder();
-        TextView response;
-        EditText locationtext;
-        Button locationbutton;
+
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loginscreen);
 
 
-        locationtext = (EditText) findViewById(R.id.editTextTextEmailAddress);
-
-        String location = locationtext.toString();
-
-        String locationnew = locationfinder.GetLongLatFromAdress(this,location).toString();
 
 
 
-        locationbutton = (Button) findViewById(R.id.getlocation);
-        locationbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                response.setText(locationnew);
-            }
+    }
 
 
-
-
-        });
+    @Override
+    protected void onStart() {
+        super.onStart();
 
 
 
 
 
-
-
-
-
-        }
-
-
-
-
-
-
-
+    }
 }

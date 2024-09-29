@@ -49,30 +49,8 @@ public class CheckHotels extends AppCompatActivity {
 
     LocationFinder locationfinder = new LocationFinder();
     String apiKey = BuildConfig.PLACES_API_KEY;
-    TextView firsthotelinfo;
-    TextView secondhotelinfo;
-    TextView thirdhotelinfo;
-    TextView fourthhotelinfo;
-    TextView Fifthhotelinfo;
-    TextView   hotelnameone;
-    TextView hotelnametwo;
-    TextView hotelnamethree;
-    TextView hotelnamefour;
-    TextView hotelnamefive;
-    TextView hoteldestination;
 
 
-    StringBuilder maininfo1 = new StringBuilder();
-    StringBuilder subinfo1 = new StringBuilder();
-    StringBuilder maininfo2 = new StringBuilder();
-    StringBuilder subinfo2 = new StringBuilder();
-    StringBuilder maininfo3 = new StringBuilder();
-    StringBuilder subinfo3 = new StringBuilder();
-    StringBuilder maininfo4 = new StringBuilder();
-    StringBuilder subinfo4 = new StringBuilder();
-    StringBuilder maininfo5 = new StringBuilder();
-    StringBuilder subinfo5 = new StringBuilder();
-    String newline = "\n";
 
 
 
@@ -92,19 +70,6 @@ public class CheckHotels extends AppCompatActivity {
 
         String hotellocation = SharedPref.read(SharedPref.CityName, (String) null);
 
-        hoteldestination = (TextView) findViewById(R.id.hoteldestinationname);
-        hoteldestination.setText(hotellocation);
-
-        hotelnameone = (TextView) findViewById(R.id.hotel1);
-        firsthotelinfo = (TextView) findViewById(R.id.firsthoteltextresponse);
-        hotelnametwo = (TextView)findViewById(R.id.hotel2);
-        secondhotelinfo = (TextView)findViewById(R.id.secondhoteltextresponse);
-        hotelnamethree = (TextView) findViewById(R.id.act3);
-        thirdhotelinfo = (TextView) findViewById(R.id.thirdhoteltextresponse);
-        hotelnamefour = (TextView) findViewById(R.id.act4);
-        fourthhotelinfo = (TextView) findViewById(R.id.fourthhoteltextresponse);
-        hotelnamefive = (TextView) findViewById(R.id.act5);
-        Fifthhotelinfo = (TextView) findViewById(R.id.fifthhoteltextresponse);
 
 
 
@@ -135,72 +100,6 @@ public class CheckHotels extends AppCompatActivity {
 
                     String firsthotelnum = places.get(0).getNationalPhoneNumber();
 
-                    maininfo1.append(firsthotelname).append(newline).append(firsthotelad).append(newline).append(firsthotelnum);
-
-                    hotelnameone.setText(maininfo1);
-
-                    subinfo1.append(firsthotelsumm).append(newline);
-                    firsthotelinfo.setText(subinfo1);
-
-
-                    String secondplacead  = places.get(1).getFormattedAddress();
-                    String secondplacenum = places.get(1).getNationalPhoneNumber();
-                    String secondplacename = places.get(1).getDisplayName();
-
-
-                    String secondplacesummary = places.get(1).getEditorialSummary();
-
-
-                    maininfo2.append(secondplacename).append(newline).append(secondplacead).append(newline).append(secondplacenum);
-
-                    hotelnametwo.setText(maininfo2);
-
-                    subinfo2.append(secondplacesummary).append(newline);
-                    secondhotelinfo.setText(subinfo2);
-
-                    /*String thirdplacead  = places.get(2).getFormattedAddress();
-                    String thirdplacenum = places.get(2).getNationalPhoneNumber();
-                    String thirdplacename = places.get(2).getDisplayName();
-
-
-                    String thirdplacesummary = places.get(2).getEditorialSummary();
-
-
-                    maininfo3.append(thirdplacename).append(newline).append(thirdplacead).append(newline).append(thirdplacenum);
-
-                    hotelnamethree.setText(maininfo3);
-
-                    subinfo3.append(thirdplacesummary).append(newline);
-                    thirdhotelinfo.setText(subinfo3);
-
-                    String fourthplacead  = places.get(3).getFormattedAddress();
-                    String fourthplacenum = places.get(3).getNationalPhoneNumber();
-                    String fourthplacename = places.get(3).getDisplayName();
-
-
-                    String fourthplacesummary = places.get(3).getEditorialSummary();
-
-                    maininfo4.append(fourthplacename).append(newline).append(fourthplacead).append(newline).append(fourthplacenum);
-
-                    hotelnamefour.setText(maininfo4);
-
-                    subinfo4.append(newline).append(fourthplacesummary).append(newline);
-                    fourthhotelinfo.setText(subinfo4);
-                    String fifthplacead  = places.get(4).getFormattedAddress();
-                    String fifthplacenum = places.get(4).getNationalPhoneNumber();
-                    String fifthplacename = places.get(4).getDisplayName();
-
-
-                    String fifthplacesummary = places.get(4).getEditorialSummary();
-                    String fifthactrating = places.get(4).getRating().toString();
-
-
-                    maininfo5.append(fifthplacename).append(newline).append(fifthplacead).append(newline).append(fifthplacenum);
-
-                    hotelnamefive.setText(maininfo5);
-
-                    subinfo5.append(fifthplacesummary).append(newline);
-                    Fifthhotelinfo.setText(subinfo5);*/
 
 
 
