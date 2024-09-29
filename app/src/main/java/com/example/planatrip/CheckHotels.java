@@ -50,6 +50,12 @@ public class CheckHotels extends AppCompatActivity {
     LocationFinder locationfinder = new LocationFinder();
     String apiKey = BuildConfig.PLACES_API_KEY;
 
+    TextView firsthotelname;
+    TextView firsthoteladdress;
+    TextView firsthotelphone;
+    TextView firsthotelrating;
+    TextView firsthotelsummary;
+
 
 
 
@@ -69,6 +75,13 @@ public class CheckHotels extends AppCompatActivity {
         PlacesClient placesClient = Places.createClient(this);
 
         String hotellocation = SharedPref.read(SharedPref.CityName, (String) null);
+
+        firsthotelname = findViewById(R.id.firsthotelname);
+        firsthoteladdress = findViewById(R.id.firsthoteladdress);
+        firsthotelphone = findViewById(R.id.firsthotelphonenumber);
+        firsthotelrating = findViewById(R.id.firsthotelrating);
+        firsthotelsummary = findViewById(R.id.firsthotelsummary);
+
 
 
 
@@ -94,11 +107,20 @@ public class CheckHotels extends AppCompatActivity {
         placesClient.searchNearby(searchNearbyRequest)
                 .addOnSuccessListener(response-> {
                     List<Place> places = response.getPlaces();
-                    String firsthotelname = places.get(0).getDisplayName().toString();
-                    String firsthotelad = places.get(0).getFormattedAddress();
-                    String firsthotelsumm = places.get(0).getEditorialSummary();
+                    String firstname = places.get(0).getDisplayName().toString();
+                    String firstaddress = places.get(0).getFormattedAddress();
+                    String firstsumm = places.get(0).getEditorialSummary();
+                    String firstrating = places.get(0).getRating().toString();
 
-                    String firsthotelnum = places.get(0).getNationalPhoneNumber();
+                    String firstnum = places.get(0).getNationalPhoneNumber();
+
+                    firsthotelname.setText(firstname);
+                    firsthotelphone.setText("Phone Number:  \t" + firstnum);
+                    firsthoteladdress.setText("Address:   \t"+ firstaddress);
+                    firsthotelrating.setText("Rating: \t" + firstrating);
+                    firsthotelsummary.setText("Summary: \n" + firstsumm);
+
+
 
 
 
